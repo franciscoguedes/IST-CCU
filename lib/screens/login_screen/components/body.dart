@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:bins/components/roundedButton.dart';
 import 'package:bins/screens/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -13,28 +12,53 @@ class Body extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              "Login",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                // fontFamily: 'Roboto', - dar import!
-                fontSize: 70,
-              ),
+            Row(
+              // ignore: prefer_const_literals_to_create_immutables
+              children: [ 
+                  const Text(
+                  "Login",
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  // fontFamily: 'Roboto', - dar import!
+                  fontSize: 70,
+                ),
+                ),
+              ],
             ),
             Container(
+              margin: EdgeInsets.symmetric(vertical: 10),
               padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+              width: size.width * 0.7,
               decoration: BoxDecoration(
                 color: Colors.lightGreen,
                 borderRadius: BorderRadius.circular(29),
               ),
+              child: const TextField(
+                decoration: InputDecoration(
+                  hintText: "Email",
+                  border: InputBorder.none,
+                ),
+              ),
             ),
            //  SizedBox(height: size.height * 0.3),
-            /*RoundedButton(
-              text: "Login",
-              press
-            )*/
+           Container(
+              margin: EdgeInsets.symmetric(vertical: 3),
+              padding: EdgeInsets.symmetric(horizontal: 20,vertical: 5),
+              width: size.width * 0.7,
+              decoration: BoxDecoration(
+                color: Colors.lightGreen,
+                borderRadius: BorderRadius.circular(29),
+              ),
+              child: const TextField(
+                decoration: InputDecoration(
+                  hintText: "Password",
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
             Container(
-              width: size.width * 0.2,
+              width: size.width * 0.7,
+              margin: EdgeInsets.symmetric(vertical: 15),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(29) ,
                 child: FlatButton(
@@ -45,7 +69,7 @@ class Body extends StatelessWidget {
                     Navigator.push(context,
                     MaterialPageRoute(
                       builder: (context) {
-                        return MyHomePage(title: "HomePage");
+                        return MyHomePage(title:"HomePage");
                       },
                     ),
                     );
