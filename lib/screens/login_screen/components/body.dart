@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
                   "Login",
                   style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  // fontFamily: 'Roboto', - dar import!
+                  fontFamily: 'RobotoMono',
                   fontSize: 70,
                 ),
                 ),
@@ -51,6 +51,12 @@ class Body extends StatelessWidget {
               ),
               child: const TextField(
                 decoration: InputDecoration(
+                  icon: 
+                    Icon(
+                      Icons.lock,
+                    //color: Colors.white,
+                    
+                  ),
                   hintText: "Password",
                   border: InputBorder.none,
                 ),
@@ -82,6 +88,14 @@ class Body extends StatelessWidget {
                 )
               ),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text("Don't have an account?",
+                style: TextStyle(color: Colors.green),
+                ),
+              ],
+            )
           ],
         ),
     );
