@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -99,7 +100,12 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Drawer Header'),
             ),
             ListTile(
-              title: const Text('Item 1'),
+              title: const Text('Home Page'),
+              leading: Icon(
+                Icons.home,
+                color: Colors.black,
+                size: 24.0,
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -108,7 +114,68 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: const Text('Item 2'),
+              title: const Text('My Profile'),
+              leading: Icon(
+                Icons.account_circle,
+                color: Colors.black,
+                size: 24.0,
+              ),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Challenges'),
+              leading: Icon(
+                Icons.emoji_events,
+                color: Colors.black,
+                size: 24.0,
+              ),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Recycle'),
+              leading: Icon(
+                MdiIcons.recycle,
+                color: Colors.black,
+                size: 24.0,
+              ),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Settings'),
+              leading: Icon(
+                Icons.settings,
+                color: Colors.black,
+                size: 24.0,
+              ),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: const Text('Logout'),
+              leading: Icon(
+                Icons.logout,
+                color: Colors.black,
+                size: 24.0,
+              ),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -122,3 +189,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
+

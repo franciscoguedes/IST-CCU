@@ -2,15 +2,7 @@ import 'package:bins/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Center(
-        child: SizedBox(
-          width: 428,
-          height: 926,
-          child: MyApp(
-          )
-        )
-      )
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -39,4 +31,3 @@ class MyApp extends StatelessWidget {
         );
       }
 }
-
