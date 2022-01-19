@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:bins/screens/homepage/homepage.dart';
 
 enum pages {none, homepage, profile, challenges, recycle, settings, logout}
 
@@ -43,7 +44,13 @@ class Sidebar extends StatelessWidget{
                 // Update the state of the app
                   _currentlySelected = pages.homepage;
                 // Then close the drawer
-                Navigator.pop(context);
+                  Navigator.push(context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return MyHomePage(title:"Home");
+                      },
+                    ),
+                  );;
               },
             ),
             ListTile(
