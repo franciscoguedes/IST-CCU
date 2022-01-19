@@ -1,3 +1,4 @@
+import 'package:bins/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:bins/screens/homepage/homepage.dart';
@@ -5,7 +6,7 @@ import 'package:bins/screens/homepage/homepage.dart';
 enum pages {none, homepage, profile, challenges, recycle, settings, logout}
 
 class Sidebar extends StatelessWidget{
-  pages _currentlySelected = pages.none;
+  pages _currentlySelected = pages.homepage;
   Color _selectedTileColor = Colors.black12;
   Color _selectedPageColor = Colors.deepPurple;
   Sidebar({Key? key}) : super(key: key);
@@ -30,7 +31,7 @@ class Sidebar extends StatelessWidget{
             ListTile(
               selected: _currentlySelected == pages.homepage ? true : false,
               selectedTileColor: _selectedTileColor,
-              title: Text('HomePage',
+              title: Text('Home',
                     style: TextStyle(
                         fontWeight: (_currentlySelected == pages.homepage ? FontWeight.bold : FontWeight.normal),
                         color:(_currentlySelected == pages.homepage ? _selectedPageColor : Colors.black))
@@ -50,7 +51,7 @@ class Sidebar extends StatelessWidget{
                         return MyHomePage(title:"Home");
                       },
                     ),
-                  );;
+                  );
               },
             ),
             ListTile(
@@ -144,7 +145,13 @@ class Sidebar extends StatelessWidget{
                 // Update the state of the app
                 _currentlySelected = pages.none;
                 // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
               },
             ),
           ],
