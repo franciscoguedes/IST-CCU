@@ -43,7 +43,7 @@ class LastChallengeItem implements HomePageItem {
           )
         ],
       )
-              );
+    );
   }
   @override
   Widget buildQuoteItem(BuildContext context) => const SizedBox.shrink();

@@ -5,7 +5,7 @@ import 'package:bins/screens/homepage/homepage.dart';
 enum pages {none, homepage, profile, challenges, recycle, settings, logout}
 
 class Sidebar extends StatelessWidget{
-  pages _currentlySelected = pages.none;
+  pages _currentlySelected = pages.homepage;
   Color _selectedTileColor = Colors.black12;
   Color _selectedPageColor = Colors.deepPurple;
   Sidebar({Key? key}) : super(key: key);

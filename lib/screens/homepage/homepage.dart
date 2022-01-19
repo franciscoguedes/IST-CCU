@@ -2,6 +2,7 @@ import 'package:bins/components/sidebar.dart';
 import 'package:bins/screens/homepage/components/QuoteItem.dart';
 import 'package:bins/screens/homepage/components/LastChallengeItem.dart';
 import 'package:bins/screens/homepage/components/TotalsItem.dart';
+import 'package:bins/screens/homepage/components/LineChartProgressItem.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,7 +17,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 class _MyHomePageWidget extends StatelessWidget {
-  List<HomePageItem> items = [QuoteItem(), QuoteItem(), TotalsItem()];
+  List<HomePageItem> items = [QuoteItem(), QuoteItem(), TotalsItem(), LineChartProgressItem()];
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -56,7 +57,7 @@ class _MyHomePageWidget extends StatelessWidget {
             case 2:
               return item.buildTotalsItem(context);
             case 3:
-              return item.buildQuoteItem(context);
+              return item.buildChartItem(context);
             default:
               return item.buildQuoteItem(context);
           }
