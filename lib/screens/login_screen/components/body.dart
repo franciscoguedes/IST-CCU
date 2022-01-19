@@ -13,13 +13,13 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
               // ignore: prefer_const_literals_to_create_immutables
               children: [ 
                    Padding(
-                     padding: const EdgeInsets.only(bottom: 70.0, left: 30),
+                     padding: const EdgeInsets.only(bottom: 70.0, left: 40),
                      child: Text(
                       "Login",
                       style: GoogleFonts.roboto(
