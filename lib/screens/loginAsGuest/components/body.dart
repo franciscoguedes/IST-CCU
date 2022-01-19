@@ -12,11 +12,10 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
-               children: [ 
-                
+               children: [
                  Ink (
                    height: size.height * 0.1,
                     decoration:  ShapeDecoration(
@@ -46,7 +45,7 @@ class Body extends StatelessWidget {
               // ignore: prefer_const_literals_to_create_immutables
               children: [ 
                    Padding(
-                     padding: const EdgeInsets.only( top: 100, left: 30),
+                     padding: const EdgeInsets.only( bottom: 100, left: 40),
                      child: Text(
                       "Login" + "\n" + "as Guest",
                       maxLines: 2,

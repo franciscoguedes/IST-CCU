@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
                children: [ 
