@@ -7,7 +7,7 @@ import 'package:bins/screens/homepage/homepage.dart';
 
 /// A ListItem that contains data to display a heading.
 class QuoteItem implements HomePageItem {
-  final Color backgroundColor = new Color(0xFFA5D6A7);
+  final Color backgroundColor = Colors.lightGreen; //new Color(0xFFA5D6A7);
 
   @override
   Widget buildQuoteItem(BuildContext context) {
@@ -25,7 +25,7 @@ class QuoteItem implements HomePageItem {
                     "Fun fact of the day",
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(color: Colors.black),
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600,
                     )
               ),
@@ -45,7 +45,7 @@ class QuoteItem implements HomePageItem {
                         "Sabias que com a quantidade que ja reciclaste a terra tornou-se plana?",
                         style: GoogleFonts.roboto(
                           textStyle: TextStyle(color: Colors.black),
-                          fontSize: 20,
+                          fontSize: 16,
                         ),
                         textAlign: TextAlign.center
                       ),
