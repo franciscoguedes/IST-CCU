@@ -63,7 +63,7 @@ class _MyHomePageWidget extends StatelessWidget {
           }
         },
       ),
-      drawer: Sidebar(),
+      drawer: Sidebar(currentlySelected: pages.homepage),
     );
   }
 }

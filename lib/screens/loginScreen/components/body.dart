@@ -2,7 +2,7 @@
 
 import 'package:bins/screens/createAccount/createAccount.dart';
 import 'package:bins/screens/homepage/homepage.dart';
-import 'package:bins/screens/loginAsGuest/loginAsGuest_screen.dart';
+import 'package:bins/screens/loginAsGuest/loginAsGuestScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

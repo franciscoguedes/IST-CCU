@@ -1,4 +1,5 @@
-import 'package:bins/screens/login_screen/login_screen.dart';
+import 'package:bins/screens/challenges/monthly/monthlyChallenges.dart';
+import 'package:bins/screens/loginScreen/loginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:bins/screens/homepage/homepage.dart';
@@ -6,10 +7,10 @@ import 'package:bins/screens/homepage/homepage.dart';
 enum pages {none, homepage, profile, challenges, recycle, settings, logout}
 
 class Sidebar extends StatelessWidget{
-  pages _currentlySelected = pages.homepage;
+  pages currentlySelected = pages.none;
   Color _selectedTileColor = Colors.black12;
   Color _selectedPageColor = Colors.deepPurple;
-  Sidebar({Key? key}) : super(key: key);
+  Sidebar({Key? key, required this.currentlySelected}) : super(key: key);
 
 
   @override
@@ -29,21 +30,21 @@ class Sidebar extends StatelessWidget{
               child: Text('Drawer Header'),
             ),
             ListTile(
-              selected: _currentlySelected == pages.homepage ? true : false,
+              selected: currentlySelected == pages.homepage ? true : false,
               selectedTileColor: _selectedTileColor,
               title: Text('Home',
                     style: TextStyle(
-                        fontWeight: (_currentlySelected == pages.homepage ? FontWeight.bold : FontWeight.normal),
-                        color:(_currentlySelected == pages.homepage ? _selectedPageColor : Colors.black))
+                        fontWeight: (currentlySelected == pages.homepage ? FontWeight.bold : FontWeight.normal),
+                        color:(currentlySelected == pages.homepage ? _selectedPageColor : Colors.black))
               ),
               leading: Icon(
                 Icons.home,
-                color: (_currentlySelected == pages.homepage ? _selectedPageColor : Colors.black),
+                color: (currentlySelected == pages.homepage ? _selectedPageColor : Colors.black),
                 size: 24.0,
               ),
               onTap: () {
                 // Update the state of the app
-                  _currentlySelected = pages.homepage;
+                  currentlySelected = pages.homepage;
                 // Then close the drawer
                   Navigator.push(context,
                     MaterialPageRoute(
@@ -55,81 +56,87 @@ class Sidebar extends StatelessWidget{
               },
             ),
             ListTile(
-              selected: _currentlySelected == pages.profile ? true : false,
+              selected: currentlySelected == pages.profile ? true : false,
               selectedTileColor: _selectedTileColor,
               title: Text('My Profile',
                     style: TextStyle(
-                        fontWeight: (_currentlySelected == pages.profile ? FontWeight.bold : FontWeight.normal),
-                        color:(_currentlySelected == pages.profile ? _selectedPageColor : Colors.black))
+                        fontWeight: (currentlySelected == pages.profile ? FontWeight.bold : FontWeight.normal),
+                        color:(currentlySelected == pages.profile ? _selectedPageColor : Colors.black))
               ),
               leading: Icon(
                 Icons.account_circle,
-                color: (_currentlySelected == pages.profile ? _selectedPageColor : Colors.black),
+                color: (currentlySelected == pages.profile ? _selectedPageColor : Colors.black),
                 size: 24.0,
               ),
               onTap: () {
                 // Update the state of the app
-                _currentlySelected = pages.profile;
+                currentlySelected = pages.profile;
                 // Then close the drawer
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              selected: _currentlySelected == pages.challenges ? true : false,
+              selected: currentlySelected == pages.challenges ? true : false,
               selectedTileColor: _selectedTileColor,
               title: Text('Challenges',
                     style: TextStyle(
-                        fontWeight: (_currentlySelected == pages.challenges ? FontWeight.bold : FontWeight.normal),
-                        color:(_currentlySelected == pages.challenges ? _selectedPageColor : Colors.black))
+                        fontWeight: (currentlySelected == pages.challenges ? FontWeight.bold : FontWeight.normal),
+                        color:(currentlySelected == pages.challenges ? _selectedPageColor : Colors.black))
               ),
               leading: Icon(
                 Icons.emoji_events,
-                color: (_currentlySelected == pages.challenges ? _selectedPageColor : Colors.black),
+                color: (currentlySelected == pages.challenges ? _selectedPageColor : Colors.black),
                 size: 24.0,
               ),
               onTap: () {
                 // Update the state of the app
-                _currentlySelected = pages.challenges;
+                currentlySelected = pages.challenges;
                 // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return MonthlyChallenges();
+                      },
+                    ),
+                  );
               },
             ),
             ListTile(
-              selected: _currentlySelected == pages.recycle ? true : false,
+              selected: currentlySelected == pages.recycle ? true : false,
               selectedTileColor: _selectedTileColor,
               title: Text('Recycle',
                     style: TextStyle(
-                        fontWeight: (_currentlySelected == pages.recycle ? FontWeight.bold : FontWeight.normal),
-                        color:(_currentlySelected == pages.recycle ? _selectedPageColor : Colors.black))
+                        fontWeight: (currentlySelected == pages.recycle ? FontWeight.bold : FontWeight.normal),
+                        color:(currentlySelected == pages.recycle ? _selectedPageColor : Colors.black))
               ),
               leading: Icon(
                 MdiIcons.recycle,
-                color: (_currentlySelected == pages.recycle ? _selectedPageColor : Colors.black),
+                color: (currentlySelected == pages.recycle ? _selectedPageColor : Colors.black),
                 size: 24.0,
               ),
               onTap: () {
                 // Update the state of the app
-                _currentlySelected = pages.recycle;
+                currentlySelected = pages.recycle;
                 // Then close the drawer
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              selected: _currentlySelected == pages.settings ? true : false,
+              selected: currentlySelected == pages.settings ? true : false,
               selectedTileColor: _selectedTileColor,
               title: Text('Settings',
                     style: TextStyle(
-                        fontWeight: (_currentlySelected == pages.settings ? FontWeight.bold : FontWeight.normal),
-                        color:(_currentlySelected == pages.settings ? _selectedPageColor : Colors.black))
+                        fontWeight: (currentlySelected == pages.settings ? FontWeight.bold : FontWeight.normal),
+                        color:(currentlySelected == pages.settings ? _selectedPageColor : Colors.black))
               ),
               leading: Icon(
                 Icons.settings,
-                color: (_currentlySelected == pages.settings ? _selectedPageColor : Colors.black),
+                color: (currentlySelected == pages.settings ? _selectedPageColor : Colors.black),
                 size: 24.0,
               ),
               onTap: () {
                 // Update the state of the app
-                _currentlySelected = pages.settings;
+                currentlySelected = pages.settings;
                 // Then close the drawer
                 Navigator.pop(context);
               },
@@ -143,7 +150,7 @@ class Sidebar extends StatelessWidget{
               ),
               onTap: () {
                 // Update the state of the app
-                _currentlySelected = pages.none;
+                currentlySelected = pages.none;
                 // Then close the drawer
                 Navigator.push(context,
                   MaterialPageRoute(

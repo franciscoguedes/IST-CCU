@@ -1,7 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:bins/screens/login_screen/components/body.dart';
+import 'package:bins/screens/loginScreen/components/body.dart';
 
 
 class LoginScreen extends StatelessWidget {

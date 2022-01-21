@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:bins/screens/homepage/homepage.dart';
-import 'package:bins/screens/login_screen/login_screen.dart';
+import 'package:bins/screens/loginScreen/loginScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
