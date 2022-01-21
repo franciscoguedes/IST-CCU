@@ -15,7 +15,7 @@ class QuoteItem implements HomePageItem {
     return Container(
       width: size.width,
       margin: EdgeInsets.symmetric(vertical: 5),
-      child:Column(
+      child: Column(
         children: [
           Row(
             children:[
@@ -37,7 +37,7 @@ class QuoteItem implements HomePageItem {
              Container(
                  width: size.width * 0.9 ,
                  margin: EdgeInsets.symmetric(vertical: 20),
-                 child:DecoratedBox(
+                 child: DecoratedBox(
                     decoration:BoxDecoration(color:backgroundColor, borderRadius:BorderRadius.circular(10)),
                     child:Container(
                       margin:EdgeInsets.symmetric(vertical: 15),

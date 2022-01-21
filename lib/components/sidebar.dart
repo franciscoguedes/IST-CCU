@@ -9,7 +9,7 @@ enum pages {none, homepage, profile, challenges, recycle, settings, logout}
 class Sidebar extends StatelessWidget{
   pages currentlySelected = pages.none;
   Color _selectedTileColor = Colors.black12;
-  Color _selectedPageColor = Colors.deepPurple;
+  Color _selectedPageColor = Colors.green;
   Sidebar({Key? key, required this.currentlySelected}) : super(key: key);
 
 
