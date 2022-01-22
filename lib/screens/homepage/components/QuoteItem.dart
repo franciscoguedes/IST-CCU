@@ -7,7 +7,7 @@ import 'package:bins/screens/homepage/homepage.dart';
 
 /// A ListItem that contains data to display a heading.
 class QuoteItem implements HomePageItem {
-  final Color backgroundColor = new Color(0xFFA5D6A7);
+  final Color backgroundColor = Colors.lightGreen; //new Color(0xFFA5D6A7);
 
   @override
   Widget buildQuoteItem(BuildContext context) {
@@ -15,7 +15,7 @@ class QuoteItem implements HomePageItem {
     return Container(
       width: size.width,
       margin: EdgeInsets.symmetric(vertical: 5),
-      child:Column(
+      child: Column(
         children: [
           Row(
             children:[
@@ -25,7 +25,7 @@ class QuoteItem implements HomePageItem {
                     "Fun fact of the day",
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(color: Colors.black),
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600,
                     )
               ),
@@ -37,7 +37,7 @@ class QuoteItem implements HomePageItem {
              Container(
                  width: size.width * 0.9 ,
                  margin: EdgeInsets.symmetric(vertical: 20),
-                 child:DecoratedBox(
+                 child: DecoratedBox(
                     decoration:BoxDecoration(color:backgroundColor, borderRadius:BorderRadius.circular(10)),
                     child:Container(
                       margin:EdgeInsets.symmetric(vertical: 15),
@@ -45,7 +45,7 @@ class QuoteItem implements HomePageItem {
                         "Sabias que com a quantidade que ja reciclaste a terra tornou-se plana?",
                         style: GoogleFonts.roboto(
                           textStyle: TextStyle(color: Colors.black),
-                          fontSize: 20,
+                          fontSize: 16,
                         ),
                         textAlign: TextAlign.center
                       ),

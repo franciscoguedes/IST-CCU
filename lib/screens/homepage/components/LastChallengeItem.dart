@@ -25,7 +25,7 @@ class LastChallengeItem implements HomePageItem {
                     "Challenges",
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(color: Colors.black),
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600,
                     )
               ),

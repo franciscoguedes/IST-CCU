@@ -1,6 +1,7 @@
 import 'package:bins/screens/challenges/monthly/monthlyChallenges.dart';
 import 'package:bins/screens/loginScreen/loginScreen.dart';
 import 'package:bins/screens/profilePage/profilePage.dart';
+import 'package:bins/screens/recycle/recycle.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:bins/screens/homepage/homepage.dart';
@@ -10,7 +11,7 @@ enum pages {none, homepage, profile, challenges, recycle, settings, logout}
 class Sidebar extends StatelessWidget{
   pages currentlySelected = pages.none;
   Color _selectedTileColor = Colors.black12;
-  Color _selectedPageColor = Colors.deepPurple;
+  Color _selectedPageColor = Colors.green;
   Sidebar({Key? key, required this.currentlySelected}) : super(key: key);
 
 
@@ -125,7 +126,13 @@ class Sidebar extends StatelessWidget{
                 // Update the state of the app
                 currentlySelected = pages.recycle;
                 // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return RecycleScreen();
+                    },
+                  ),
+                );
               },
             ),
             ListTile(

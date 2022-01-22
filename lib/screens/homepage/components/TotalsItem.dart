@@ -12,7 +12,7 @@ class TotalsItem implements HomePageItem {
   final Color glassColor = fromCssColor('#049665');
   final Color paperColor = fromCssColor('#0396CC');
   final Color batteriesColor = fromCssColor('#F60101');
-  final Color TotalsColor = fromCssColor('#7A9F80');
+  final Color TotalsColor = Colors.lightGreen;//fromCssColor('#7A9F80');
   final double sizeMaterialsTitle = 15;
   final double sizeWeightTitle = 20;
   //this box creates space between the material and
@@ -42,7 +42,7 @@ class TotalsItem implements HomePageItem {
                     "Challenges",
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(color: Colors.black),
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600,
                     )
               ),

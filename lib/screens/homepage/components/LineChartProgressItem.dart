@@ -25,7 +25,7 @@ class LineChartProgressItem implements HomePageItem {
                     "Your progress",
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(color: Colors.black),
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.w600,
                     )
               ),
@@ -73,7 +73,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
                 borderRadius: BorderRadius.all(
                   Radius.circular(18),
                 ),
-                color: Color(0xff232d37)),
+                color: Colors.white),  //Color(0xff232d37)),
             child: Padding(
               padding: const EdgeInsets.only(
                   right: 18.0, left: 12.0, top: 24, bottom: 12),
@@ -95,9 +95,10 @@ class _LineChartSample2State extends State<LineChartSample2> {
             child: Text(
               'avg',
               style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
                   color:
-                  showAvg ? Colors.white.withOpacity(0.5) : Colors.white),
+                  showAvg ? Color(0xff67727d).withOpacity(0.5) : Color(0xff67727d)),
             ),
           ),
         ),
@@ -112,13 +113,13 @@ class _LineChartSample2State extends State<LineChartSample2> {
         drawVerticalLine: true,
         getDrawingHorizontalLine: (value) {
           return FlLine(
-            color: const Color(0xff37434d),
+            color: Colors.grey.withOpacity(0.5),//const Color(0xff37434d),
             strokeWidth: 1,
           );
         },
         getDrawingVerticalLine: (value) {
           return FlLine(
-            color: const Color(0xff37434d),
+            color: Colors.grey.withOpacity(0.5), //const Color(0xff37434d),
             strokeWidth: 1,
           );
         },
@@ -177,7 +178,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
       ),
       borderData: FlBorderData(
           show: true,
-          border: Border.all(color: const Color(0xff37434d), width: 1)),
+          border: Border.all(color: Colors.grey.withOpacity(0.5)/*const Color(0xff37434d)*/, width: 1)),
       minX: 0,
       maxX: 11,
       minY: 0,

@@ -1,3 +1,4 @@
+import 'package:bins/screens/challenges/monthly/monthlyChallenges.dart';
 import 'package:bins/screens/loginScreen/loginScreen.dart';
 
 import 'package:flutter/material.dart';
