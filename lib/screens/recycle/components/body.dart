@@ -1,32 +1,48 @@
 
-import 'package:bins/components/sidebar.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
+import 'package:flutter/material.dart';
 import 'map.dart';
+import 'package:photo_view/photo_view.dart';
 
 class Body extends StatelessWidget {
 
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(
-            "Recycle",
-            style: GoogleFonts.roboto(
-                fontSize: 50,
-                fontWeight: FontWeight.w900,
-                color: Colors.black
-            )),
-        backgroundColor: Colors.white,
-        shadowColor: Colors.white,
-        iconTheme: const IconThemeData(color:Colors.black, size: 35),
-      ),
-      body: FlutterMap(),
-      drawer: Sidebar(currentlySelected: pages.recycle,),
-    );
+    PhotoViewController controller = PhotoViewController();
+    double width = MediaQuery. of(context). size. width ;
+    double height = MediaQuery. of(context). size. height;
+    return Stack(
+        children: [
+          FlutterMap(),
+          IgnorePointer(
+              ignoring: true,
+              child: Center(
+                child: Container(
+                      width: 60,
+                      height: 60,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color.fromRGBO(102, 201, 217, 0.5)
+                      ),
+                ),
+              ),
+          ),
+          IgnorePointer(
+            ignoring: true,
+            child: Center(
+              child: Container(
+                width: 20,
+                height: 20,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border:Border.all(
+                      color:Colors.white,
+                      width: 2,
+                    ),
+                    color: Colors.blue),
+              ),
+            ),
+          ),
+        ]);
   }
 }
