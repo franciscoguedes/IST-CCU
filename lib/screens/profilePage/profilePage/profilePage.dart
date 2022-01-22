@@ -1,7 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:bins/screens/profilePage/components/body.dart';
+import 'components/body.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bins/components/sidebar.dart';
 

@@ -1,6 +1,6 @@
 import 'package:bins/screens/challenges/monthly/monthlyChallenges.dart';
 import 'package:bins/screens/loginScreen/loginScreen.dart';
-import 'package:bins/screens/profilePage/profilePage.dart';
+import '../screens/profilePage/profilePage/profilePage.dart';
 import 'package:bins/screens/recycle/recycle.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';

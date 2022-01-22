@@ -2,6 +2,8 @@
 import 'package:bins/components/sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bins/screens/profilePage/editProfile/editProfilePage.dart';
+
 
 class Body extends StatelessWidget {
 
@@ -12,7 +14,23 @@ class Body extends StatelessWidget {
 
     return Column(
         children: [
-          Container(height: 40,),
+          Container(height: 40,
+            width: 350,
+            alignment: Alignment.topRight,
+            child: IconButton(
+              icon: const Icon(Icons.create_outlined),
+              alignment: Alignment.topRight,
+              onPressed: () {
+                Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return EditProfilePage();
+                    },
+                  ),
+                );
+              },
+            ),
+          ),
           Container(
             alignment: Alignment.topCenter,
             height: 170,
