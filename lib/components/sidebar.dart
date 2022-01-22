@@ -1,5 +1,6 @@
 import 'package:bins/screens/challenges/monthly/monthlyChallenges.dart';
 import 'package:bins/screens/loginScreen/loginScreen.dart';
+import 'package:bins/screens/profilePage/profilePage.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:bins/screens/homepage/homepage.dart';
@@ -72,7 +73,13 @@ class Sidebar extends StatelessWidget{
                 // Update the state of the app
                 currentlySelected = pages.profile;
                 // Then close the drawer
-                Navigator.pop(context);
+                Navigator.push(context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return ProfilePage();
+                    },
+                  ),
+                );
               },
             ),
             ListTile(
