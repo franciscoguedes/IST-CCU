@@ -39,7 +39,7 @@ class TotalsItem implements HomePageItem {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 child:Text(
-                    "Challenges",
+                    "Total Recycled",
                     style: GoogleFonts.roboto(
                       textStyle: TextStyle(color: Colors.black),
                       fontSize: 20,

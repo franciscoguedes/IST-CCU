@@ -17,7 +17,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 class _MyHomePageWidget extends StatelessWidget {
-  List<HomePageItem> items = [QuoteItem(), QuoteItem(), TotalsItem(), LineChartProgressItem()];
+  List<HomePageItem> items = [QuoteItem(), LastChallengeItem(), TotalsItem(), LineChartProgressItem()];
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -53,7 +53,7 @@ class _MyHomePageWidget extends StatelessWidget {
             case 0:
               return item.buildQuoteItem(context);
             case 1:
-              return item.buildQuoteItem(context);
+              return item.buildLastChallengeItem(context);
             case 2:
               return item.buildTotalsItem(context);
             case 3:

@@ -1,7 +1,7 @@
 import 'package:bins/components/sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:bins/screens/challenges/components/ChallengeItem.dart';
 import 'package:bins/screens/homepage/homepage.dart';
 
 
@@ -32,12 +32,13 @@ class LastChallengeItem implements HomePageItem {
               )]
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
              Container(
                  width: size.width * 0.9 ,
                  margin: EdgeInsets.symmetric(vertical: 20),
                  alignment: Alignment.center,
-                 child: Container(),
+                 child: ChallengeItem(heading:"Challenge 1", progress:0.5, reward: "10€"),
              )
             ],
           )
