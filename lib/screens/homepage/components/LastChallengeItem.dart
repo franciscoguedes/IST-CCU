@@ -38,7 +38,7 @@ class LastChallengeItem implements HomePageItem {
                  width: size.width * 0.9 ,
                  margin: EdgeInsets.symmetric(vertical: 20),
                  alignment: Alignment.center,
-                 child: ChallengeItem(heading:"Challenge 1", progress:0.5, reward: "10€"),
+                 child: ChallengeItem(heading:"Challenge 1", progress:0.5, reward: "10€", page: pages.homepage),
              )
             ],
           )
