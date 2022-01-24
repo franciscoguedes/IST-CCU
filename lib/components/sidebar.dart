@@ -1,5 +1,6 @@
 import 'package:bins/screens/challenges/monthly/monthlyChallenges.dart';
 import 'package:bins/screens/loginScreen/loginScreen.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../screens/profilePage/profilePage/profilePage.dart';
 import 'package:bins/screens/recycle/recycle.dart';
 import 'package:flutter/material.dart';
@@ -25,11 +26,19 @@ class Sidebar extends StatelessWidget{
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+            UserAccountsDrawerHeader(
+              accountEmail: Text(""),
+              accountName: Text("Bart Simpson",
+                style: GoogleFonts.roboto(
+                        textStyle: TextStyle(color: Colors.black),
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                      )
+              ),
               decoration: BoxDecoration(
                 color: Colors.green,
               ),
-              child: Text('Drawer Header'),
+              currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("bart.png")),
             ),
             ListTile(
               selected: currentlySelected == pages.homepage ? true : false,

@@ -14,9 +14,9 @@ class Body extends StatelessWidget {
 
     return Column(
         children: [
-          Container(height: 40,
+          Container(height: 70,
             width: 350,
-            alignment: Alignment.topRight,
+            alignment: Alignment.centerRight,
             child: IconButton(
               icon: const Icon(Icons.create_outlined),
               alignment: Alignment.topRight,
