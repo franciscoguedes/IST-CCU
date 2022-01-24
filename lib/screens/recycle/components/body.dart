@@ -5,12 +5,16 @@ import 'map.dart';
 import 'package:photo_view/photo_view.dart';
 
 class Body extends StatelessWidget {
+  double x = 0;
+  double y = 0;
+
 
   @override
   Widget build(BuildContext context) {
     PhotoViewController controller = PhotoViewController();
     double width = MediaQuery. of(context). size. width ;
     double height = MediaQuery. of(context). size. height;
+
     return Stack(
         children: [
           FlutterMap(),
