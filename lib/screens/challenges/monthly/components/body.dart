@@ -4,22 +4,21 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Body extends StatelessWidget {
-  final List<ChallengeItem> items = [ChallengeItem(heading:"Challenge 1", progress:0.5, reward: "10€"),
-                    ChallengeItem(heading:"Challenge 2", progress: 0.1, reward: "0.10€",),
-                    ChallengeItem(heading:"Challenge 3", progress: 0.2, reward: "0.10€",),
-                    ChallengeItem(heading:"Challenge 4", progress: 0.2, reward: "0.10€",),
-                    ChallengeItem(heading:"Challenge 5", progress: 0.2, reward: "0.10€",),
-                    ChallengeItem(heading:"Challenge 6", progress: 0.2, reward: "0.10€",),
-                    ChallengeItem(heading:"Challenge 7", progress: 0.2, reward: "0.10€",),
-                    ChallengeItem(heading:"Challenge 8", progress: 0.2, reward: "0.10€",),
-                    ChallengeItem(heading:"Challenge 9", progress: 0.2, reward: "0.10€",)];
+  final List<ChallengeItem> items = [ChallengeItem(heading:"Challenge 1", progress:0.5, reward: "10€", objective: 15,),
+                    ChallengeItem(heading:"Challenge 2", progress: 0.3, reward: "0.10€", objective: 15,),
+                    ChallengeItem(heading:"Challenge 3", progress: 0, reward: "0.10€", objective: 15,),
+                    ChallengeItem(heading:"Challenge 4", progress: 0.6, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Challenge 5", progress: 0, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Challenge 6", progress: 0, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Challenge 7", progress: 0, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Challenge 8", progress: 0, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Challenge 9", progress: 0, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Challenge 10", progress: 0, reward: "0.10€", objective: 10,)];
 
   Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-
     return ListView.builder(itemCount: items.length, itemBuilder: (BuildContext context, int index){
       if (index == 0) {
         // return the header
