@@ -4,6 +4,7 @@ import 'bin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:photo_view/photo_view.dart';
+import 'package:bins/screens/recycle/components/qrcode.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class FlutterMap extends StatelessWidget {
@@ -155,7 +156,9 @@ class FlutterMap extends StatelessWidget {
       actions: <Widget>[
         FlatButton(
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => const QRViewExample(),
+            ));
           },
           textColor: Colors.deepPurple,
           child: const Text('RECYCLE'),

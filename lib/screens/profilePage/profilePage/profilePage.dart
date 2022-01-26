@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'components/body.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bins/components/sidebar.dart';
-
+import 'package:bins/constants.dart';
 
 class ProfilePage extends StatelessWidget {
   @override
@@ -16,14 +16,13 @@ class ProfilePage extends StatelessWidget {
         title: Text(
             "Profile",
             style: GoogleFonts.roboto(
-                fontSize: 50,
+                fontSize: appBarFontTitle,
                 fontWeight: FontWeight.w900,
                 color: Colors.black
             )),
         backgroundColor: Colors.white,
-        shadowColor: Colors.white,
+        shadowColor: appBarShadowColor,
         iconTheme: const IconThemeData(color:Colors.black, size: 35),
-
       ),
       body: Body(),
       drawer: Sidebar(currentlySelected: pages.profile,),

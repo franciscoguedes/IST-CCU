@@ -4,6 +4,7 @@ import 'package:bins/components/sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:bins/screens/challenges/monthly/components/body.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bins/constants.dart';
 
 
 class MonthlyChallenges extends StatelessWidget {
@@ -17,12 +18,12 @@ class MonthlyChallenges extends StatelessWidget {
         title: Text(
             "Challenges",
             style: GoogleFonts.roboto(
-              fontSize: 50,
+              fontSize: appBarFontTitle,
               fontWeight: FontWeight.w900,
               color: Colors.black
             )),
         backgroundColor: Colors.white,
-        shadowColor: Colors.white,
+        shadowColor: appBarShadowColor,
         iconTheme: const IconThemeData(color:Colors.black, size: 35),
 
       ),

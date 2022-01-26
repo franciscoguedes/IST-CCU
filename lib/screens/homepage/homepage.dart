@@ -5,6 +5,7 @@ import 'package:bins/screens/homepage/components/TotalsItem.dart';
 import 'package:bins/screens/homepage/components/LineChartProgressItem.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bins/constants.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -33,12 +34,12 @@ class _MyHomePageWidget extends StatelessWidget {
         title: Text(
             "Home",
             style: GoogleFonts.roboto(
-              fontSize: 50,
+              fontSize: appBarFontTitle,
               fontWeight: FontWeight.w900,
               color: Colors.black
             )),
         backgroundColor: Colors.white,
-        shadowColor: Colors.white,
+        shadowColor: appBarShadowColor,
         iconTheme: const IconThemeData(color:Colors.black, size: 35),
 
       ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:bins/components/sidebar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bins/screens/recycle/components/body.dart';
+import 'package:bins/constants.dart';
 
 
 class RecycleScreen extends StatelessWidget {
@@ -16,12 +17,12 @@ class RecycleScreen extends StatelessWidget {
         title: Text(
             "Recycle",
             style: GoogleFonts.roboto(
-                fontSize: 50,
+                fontSize: appBarFontTitle,
                 fontWeight: FontWeight.w900,
                 color: Colors.black
             )),
         backgroundColor: Colors.white,
-        shadowColor: Colors.white,
+        shadowColor: appBarShadowColor,
         iconTheme: const IconThemeData(color: Colors.black, size: 35),
       ),
       drawer: Sidebar(currentlySelected: pages.recycle,),
