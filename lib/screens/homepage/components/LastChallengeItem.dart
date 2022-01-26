@@ -1,7 +1,7 @@
 import 'package:bins/components/sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:bins/screens/challenges/components/ChallengeItem.dart';
+import 'package:bins/screens/challenges/monthly/components/body.dart' as ChallengeList;
 import 'package:bins/screens/homepage/homepage.dart';
 
 
@@ -38,7 +38,7 @@ class LastChallengeItem implements HomePageItem {
                  width: size.width * 0.9 ,
                  margin: EdgeInsets.symmetric(vertical: 20),
                  alignment: Alignment.center,
-                 child: ChallengeItem(heading:"Challenge 1", progress:0, reward: "10€", page: pages.homepage, objective: 10,),
+                 child: ChallengeList.Body().getMostProgressedChallenge(),
              )
             ],
           )
@@ -46,9 +46,7 @@ class LastChallengeItem implements HomePageItem {
       )
     );
 
-    ChallengeItem getClosestToCompletionChallenge(BuildContext context){
 
-    }
   }
   @override
   Widget buildQuoteItem(BuildContext context) => const SizedBox.shrink();
