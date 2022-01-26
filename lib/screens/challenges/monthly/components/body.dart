@@ -1,4 +1,5 @@
 
+import 'package:bins/components/sidebar.dart';
 import 'package:bins/screens/challenges/components/ChallengeItem.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,6 +17,18 @@ class Body extends StatelessWidget {
                     ChallengeItem(heading:"Challenge 10", progress: 0, reward: "0.10€", objective: 10,)];
 
   Body({Key? key}) : super(key: key);
+
+  ChallengeItem getMostProgressedChallenge(){
+    double progress = 0;
+    ChallengeItem challengeItem = items[0];
+    for (ChallengeItem challenge in items){
+      if (progress < challenge.progress){
+        progress = challenge.progress;
+        challengeItem = challenge;
+      }
+    }
+    return ChallengeItem(heading: challengeItem.heading, progress: challengeItem.progress, reward: challengeItem.reward, objective: challengeItem.objective, page: pages.homepage);
+  }
 
   @override
   Widget build(BuildContext context) {
