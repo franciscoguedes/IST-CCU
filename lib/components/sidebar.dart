@@ -1,3 +1,4 @@
+import 'package:bins/constants.dart';
 import 'package:bins/screens/challenges/monthly/monthlyChallenges.dart';
 import 'package:bins/screens/loginScreen/loginScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,7 +37,7 @@ class Sidebar extends StatelessWidget{
                       )
               ),
               decoration: BoxDecoration(
-                color: Colors.green,
+                color: primaryGreen,
               ),
               currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("bart.png")),
             ),

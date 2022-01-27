@@ -22,7 +22,7 @@ class MonthlyChallenges extends StatelessWidget {
               fontWeight: FontWeight.w900,
               color: Colors.black
             )),
-        backgroundColor: Colors.white,
+        backgroundColor: primaryGreen,
         shadowColor: appBarShadowColor,
         iconTheme: const IconThemeData(color:Colors.black, size: 35),
 

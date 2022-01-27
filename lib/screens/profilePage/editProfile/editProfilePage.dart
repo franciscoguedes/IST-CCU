@@ -1,5 +1,6 @@
 import 'dart:html';
 
+import 'package:bins/constants.dart';
 import 'package:flutter/material.dart';
 import 'components/body.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,7 @@ class EditProfilePage extends StatelessWidget {
                 fontWeight: FontWeight.w900,
                 color: Colors.black
             )),
-        backgroundColor: Colors.white,
+        backgroundColor: primaryGreen,
         shadowColor: Colors.white,
         iconTheme: const IconThemeData(color:Colors.black, size: 35),
 
