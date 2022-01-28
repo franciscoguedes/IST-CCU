@@ -42,7 +42,7 @@ class QuoteItem implements HomePageItem {
                     child:Container(
                       margin:EdgeInsets.symmetric(vertical: 15),
                       child:Text(
-                        "Sabias que com a quantidade que ja reciclaste a terra tornou-se plana?",
+                        "If we recycled all newspapers, we could save over 250 million trees each and every year.",
                         style: GoogleFonts.roboto(
                           textStyle: TextStyle(color: Colors.black),
                           fontSize: 16,
