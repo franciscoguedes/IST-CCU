@@ -5,6 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
 
+import '../recycle.dart';
+
 class QRViewExample extends StatefulWidget {
   const QRViewExample({Key? key}) : super(key: key);
 
@@ -99,10 +101,10 @@ class _QRViewExampleState extends State<QRViewExample> {
                       Container(
                         margin: const EdgeInsets.all(8),
                         child: ElevatedButton(
-                          onPressed: () async {
-                            await controller?.resumeCamera();
+                          onPressed: () {
+                            Navigator.of(context).pop();
                           },
-                          child: const Text('resume',
+                          child: const Text('cancel',
                               style: TextStyle(fontSize: 20)),
                         ),
                       )
@@ -146,7 +148,8 @@ class _QRViewExampleState extends State<QRViewExample> {
       setState(() {
         result = scanData;
         String? resultStr = result?.code;
-        debugPrint("scaned data = $resultStr");
+        debugPrint("scanned data = $resultStr");
+        Navigator.of(context).pop(resultStr);
       });
     });
   }

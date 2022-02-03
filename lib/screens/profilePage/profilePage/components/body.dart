@@ -40,7 +40,7 @@ class Body extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               children: [
-              CircleAvatar(backgroundImage: AssetImage("bart.png"),
+              CircleAvatar(backgroundImage: AssetImage("oliver.png"),
               ),
             ],
           ),
@@ -57,7 +57,7 @@ class Body extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 TextSpan(
-                text: "Bart Simpson\n",
+                text: "Oliver Scott\n",
                 style: TextStyle(),
                 ),
                 ],

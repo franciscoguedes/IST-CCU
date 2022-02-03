@@ -5,16 +5,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Body extends StatelessWidget {
-  final List<ChallengeItem> items = [ChallengeItem(heading:"Challenge 1", progress:0.5, reward: "10€", objective: 15,),
-                    ChallengeItem(heading:"Challenge 2", progress: 0.3, reward: "0.10€", objective: 15,),
-                    ChallengeItem(heading:"Challenge 3", progress: 0, reward: "0.10€", objective: 15,),
-                    ChallengeItem(heading:"Challenge 4", progress: 0.6, reward: "0.10€", objective: 10,),
-                    ChallengeItem(heading:"Challenge 5", progress: 0, reward: "0.10€", objective: 10,),
-                    ChallengeItem(heading:"Challenge 6", progress: 0, reward: "0.10€", objective: 10,),
-                    ChallengeItem(heading:"Challenge 7", progress: 0, reward: "0.10€", objective: 10,),
-                    ChallengeItem(heading:"Challenge 8", progress: 0, reward: "0.10€", objective: 10,),
-                    ChallengeItem(heading:"Challenge 9", progress: 0, reward: "0.10€", objective: 10,),
-                    ChallengeItem(heading:"Challenge 10", progress: 0, reward: "0.10€", objective: 10,)];
+  final List<ChallengeItem> items = [ChallengeItem(heading:"Recycle 20 times", progress:0.5, reward: "0.30€", objective: 20,),
+                    ChallengeItem(heading:"Recycle 2kg of batteries", progress: 0.8, reward: "0.05€", objective: 2,),
+                    ChallengeItem(heading:"Recycle 5kg of batteries", progress: 0.32, reward: "0.10€", objective: 5,),
+                    ChallengeItem(heading:"Recycle 10kg of glass", progress: 0.7, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Recycle 10kg of plastic", progress: 0.5, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Recycle 10kg of paper", progress: 0.9, reward: "0.10€", objective: 10,),
+                    ChallengeItem(heading:"Recycle 10kg of batteries", progress: 0.16, reward: "0.20€", objective: 10,),
+                    ChallengeItem(heading:"Recycle 25kg of glass", progress: 0.28, reward: "0.20€", objective: 25,),
+                    ChallengeItem(heading:"Recycle 25kg of plastic", progress: 0.2, reward: "0.20€", objective: 25,),
+                    ChallengeItem(heading:"Recycle 25kg of paper", progress: 0.36, reward: "0.20€", objective: 25,)];
 
   Body({Key? key}) : super(key: key);
 

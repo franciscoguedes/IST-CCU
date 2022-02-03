@@ -29,7 +29,7 @@ class Sidebar extends StatelessWidget{
           children: [
             UserAccountsDrawerHeader(
               accountEmail: Text(""),
-              accountName: Text("Bart Simpson",
+              accountName: Text("Oliver Scott",
                 style: GoogleFonts.roboto(
                         textStyle: TextStyle(color: Colors.black),
                         fontSize: 20,
@@ -39,7 +39,7 @@ class Sidebar extends StatelessWidget{
               decoration: BoxDecoration(
                 color: primaryGreen,
               ),
-              currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("bart.png")),
+              currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("oliver.png")),
             ),
             ListTile(
               selected: currentlySelected == pages.homepage ? true : false,

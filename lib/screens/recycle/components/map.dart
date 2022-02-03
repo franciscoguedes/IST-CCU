@@ -10,13 +10,13 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 class FlutterMap extends StatelessWidget {
   PhotoViewController controller = PhotoViewController();
 
-  final List<Bin> bins = [Bin(65.0, 70.0, "Pao de Acucar", 200, 60, false),
-                          Bin(84.0, -265.0, "Pao de Acucar11", 200, 60, false),
-                          Bin(-615.0, -203.0, "Pao de Acucar2", 200, 60, false),
-                          Bin(4.0, 485.0, "Pao de Acucar3", 200, 60, false),
-                          Bin(552.0, -445.0, "Pao de Acucar4", 200, 60, false),
-                          Bin(553.0, 114.0, "Pao de Acucar5", 200, 60, false),
-                          Bin(-487.0, 154.0, "Pao de Acucar6", 200, 60, false)];
+  final List<Bin> bins = [Bin(65.0, 70.0, "Avenida Almirante Reis, 70", 200, Random().nextInt(150) , false),
+                          Bin(84.0, -265.0, "Avenida Almirante Reis, 171", 200, Random().nextInt(150), true),
+                          Bin(-615.0, -203.0, "Rotunda Vale de Chelas", 200, Random().nextInt(150), false),
+                          Bin(4.0, 485.0, "Praça Francisco Sá Carneiro", 200, Random().nextInt(150), true),
+                          Bin(552.0, -445.0, "Rua de Dona Estefânia", 200, Random().nextInt(150), false),
+                          Bin(553.0, 114.0, "Rua Bacelar e Silva", 200, Random().nextInt(150), true),
+                          Bin(-487.0, 154.0, "Rotunda Olaias", 200, Random().nextInt(150), false)];
 
   @override
   Widget build(BuildContext context) {
@@ -138,6 +138,31 @@ class FlutterMap extends StatelessWidget {
       ],
     );
   }
+
+  Widget _buildFinishRecycleDialog(BuildContext context, String result) {
+    return AlertDialog(
+      title: Text("Recycling Complete"),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text("You recycled: " +
+              result.toString() + "\n"
+          )
+        ],
+      ),
+      actions: <Widget>[
+        FlatButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          textColor: Colors.deepPurple,
+          child: const Text('CLOSE'),
+        )
+      ],
+    );
+  }
+
   Widget _buildRecyclePopupDialog(BuildContext context, Bin bin) {
     return AlertDialog(
       title: Text("Recycle"),
@@ -155,10 +180,18 @@ class FlutterMap extends StatelessWidget {
       ),
       actions: <Widget>[
         FlatButton(
-          onPressed: () {
-            Navigator.of(context).push(MaterialPageRoute(
-              builder: (context) => const QRViewExample(),
-            ));
+          onPressed: () async {
+            final result = await Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const QRViewExample(),),
+            );
+            if(result != null){
+              Navigator.of(context).pop();
+              showDialog(
+                context: context,
+                builder: (BuildContext context) => _buildFinishRecycleDialog(context, result),
+              );
+            }
           },
           textColor: Colors.deepPurple,
           child: const Text('RECYCLE'),

@@ -35,7 +35,7 @@ class _EditPage extends State<EditPage> {
             child: Stack(
               fit: StackFit.expand,
               children: [
-              CircleAvatar(backgroundImage: AssetImage("bart.png"),
+              CircleAvatar(backgroundImage: AssetImage("oliver.png"),
               ),
             ],
           ),
@@ -66,7 +66,7 @@ class _EditPage extends State<EditPage> {
             child: TextField(
                   decoration: InputDecoration(
                     labelText: "Full Name",
-                    hintText: "Bart Simpson"
+                    hintText: "Oliver Scott"
                   ),
 
                 ),
